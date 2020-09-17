@@ -21,7 +21,7 @@ public class PhlytApplication {
         SpringApplication.run(PhlytApplication.class, args);
     }
 
-    @GetMapping("/points")
+    @GetMapping(value = "/points", produces = MediaType.APPLICATION_JSON_VALUE)
     //@ResponseBody
     public List<Point> getPoints(/*@Param("location") */String location){
         System.out.println("Location: " + location);
